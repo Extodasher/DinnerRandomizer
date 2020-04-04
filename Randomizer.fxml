@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Randomizer.Controller">
+   <children>
+      <SplitPane dividerPositions="0.2994652406417112" layoutX="116.0" layoutY="240.0" prefHeight="400.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <ListView fx:id="list" editable="true" layoutX="-70.0" layoutY="-28.0" minWidth="205.0" prefHeight="398.0" prefWidth="205.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="509.0">
+               <children>
+         
+                   <Button layoutX="13.0" layoutY="48.0" onAction="#addMeal" text="Add" textAlignment="CENTER" />
+                  <TextField fx:id="textField" layoutX="65.0" layoutY="48.0" onKeyPressed="#addMealEnter" prefWidth="149.0" />
+                  <Label fx:id="forDinner" layoutX="13.0" layoutY="224.0" prefHeight="222.0" prefWidth="500.0" wrapText="true">
+                     <font>
+                        <Font size="40.0" />
+                     </font></Label>
+                  <Button fx:id="generatorButton" layoutX="14.0" layoutY="187.0" mnemonicParsing="false" onAction="#nextMeal" text="What are we having for dinner?" />
+                  <Button fx:id="deleteButton" layoutX="14.0" layoutY="123.0" mnemonicParsing="false" onAction="#removeMeals" text="Delete" />
+                  <Label fx:id="debugLabel" layoutX="14.0" layoutY="135.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
